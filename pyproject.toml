@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "tensorflow-serving-sample"
+version = "0.1.0"
+description = ""
+authors = ["ebiebix <ebi.h.821@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10, <3.12"
+tensorflow-macos = { version = "~2.11", markers = "platform_system=='Darwin' or platform_machine=='arm64'" }
+tensorflow = { version = "~2.11", markers = "platform_system!='Darwin' or platform_machine!='arm64'" }
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
